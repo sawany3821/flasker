@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>財務アプリ</h1>
+    <h2>将来の売上は</h2>
+      {%　if firms == []　%}
+        <p>将来の売上予測はありません</p>
+      {% else %}
+        <table border="1">
+          <tr>
+            <th>企業名</th>
+            <th>金額</th>
+            <th>将来の売上</th>
+          </tr>
+          {% for firm in firms %}
+            <tr>
+              <td>{{ firm.company_name }}</td>
+              <td>{{ firm.earning }}</td>
+              <td>{{ firm.future_earning }}</td>
+            </tr>
+          {%endfor%}
+        </table>
+      {% endif %}
+    <a href="{{ url_for('form')}}">編集</a>
+  </body>
+</html>

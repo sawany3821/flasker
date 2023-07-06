@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>company</title>
+  </head>
+  <body>
+    <h1>財務アプリ</h1>
+    <h2>企業情報を入力</h2>
+      <form method="post" action="{{ url_for('register')}}">
+        <table border="1">
+            <tr>
+                <th>企業名</th>
+                <th>金額</th>
+                <th>将来の売上</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="company_name"></td>
+                <td><input type="text" name="earning"></td>
+                <td><input type="text" name="future_earning"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="submit" value="登録">
+      </form>
+  </body>
+</html>
